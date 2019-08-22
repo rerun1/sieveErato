@@ -1,30 +1,38 @@
 
-#### New Project
-#### _**by Suzi Rubino — **_
+#### Find primes to a user ceiling using the sieve of Eratosthenes
+#### _**by Suzi Rubino — 8-21-19 **_
 <br>
 
 ## Description
 
+Given a user number input via a form, script returns a list of primes up to that number.
 
+Used Sieve of Eratosthenes to step through this problem. Here's how the Sieve of Eratosthenes works to find a number up to a given number:
+
+Create a list of numbers from 2 through n: 2, 3, 4, ..., number.
+Initially, let prime equal 2, the first prime number.
+Starting from prime, remove all multiples of prime from the list.
+Increment prime by 1.
+When you reach number, all the remaining numbers in the list are primes
 
 <br>
 
 ## Objectives
-- [] JavaScript business logic and user interface logic are separate.
-- [] Variable names are descriptive and use lower camel case (e.g. myVariableExample).
-- [] Code is clean, well-refactored, and easy-to-read. This includes correct indendation, spacing, and including only necessary comments and debugging tools.
-- [] Application implements a for loop and works as expected.
+- [x] JavaScript business logic and user interface logic are separate.
+- [x] Variable names are descriptive and use lower camel case (e.g. myVariableExample).
+- [x] Code is clean, well-refactored, and easy-to-read. This includes correct indendation, spacing, and including only necessary comments and debugging tools.
+- [x] Application implements a for loop and works as expected.
 All previous objectives have been met.
-- [] Project is broken down into "plain English" specs, listed in README.
-- [] Project is in a presentable, portfolio-quality state.
-- [] Practice styling with imagery
+- [x] Project is broken down into "plain English" specs, listed in README.
+- [x] Project is in a presentable, portfolio-quality state.
+- [x] Practice styling with imagery
 
 <br>
 
 ## Current Screenshot for Reference
 <br>
 
-![alt text](https://raw.githubusercontent.com/rerun1/factorial/master/img/screenShot8-20-19.png)
+![alt text](https://raw.githubusercontent.com/rerun1/sieveErato/master/img/screenShot8-21-19.png)
 <br>
 <br>
 
