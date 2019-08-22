@@ -1,27 +1,48 @@
 var userNumber = 0;
+var numbers = [];
 var primes = [];
 
+var findPrimes = function(number) {
+  //Create and populate number array
+  for (var i = 0; i <= userNumber; i++) {
+    numbers.push(true);
+  }
+
+  //Remove multiples of prime numbers
+  for (var i = 2; i <= userNumber; i++) {
+    for (var j = i * i; j <= userNumber; j += i) {
+      numbers[j] = false;
+    }
+  }
+
+  //Create and populate array of prime numbers
+  for (var i = 2; i <= userNumber; i++) {
+    if (numbers[i]) {
+      primes.push(i);
+    }
+  }
+  return primes;
+}
 
 $(document).ready(function(){
+
 
   $("form#userNumber").submit(function(event){
     event.preventDefault();
 
+    primes = [];
+
+    $("ul#primesText").empty();
+
     userNumber = parseInt($("input#userNumber").val());
 
-    console.log(userNumber);
-    console.log(typeof userNumber);
+    findPrimes(userNumber);
 
-    for (var index = 2; index = ((index*index)>userNumber); index += 1) {
-      primes.push(index);
-
-      maybe map?
+    var primesParagraph = primes.join(", ");
+    console.log(primesParagraph);
 
 
-      if (index === (!index*index)) {
-        get rid of it
-      }
-    }
+    $("p#primesText").text("The list of prime numbers up to your number is: " + primesParagraph);
 
   });
 
